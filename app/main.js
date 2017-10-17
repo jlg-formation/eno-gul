@@ -1,6 +1,6 @@
 import 'angular';
 import 'angular/angular-csp.css';
-import './style.css';
+import './style.scss';
 
 const app = angular.module('main', []);
 

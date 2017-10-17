@@ -23,6 +23,12 @@ module.exports = {
 				fallback: 'style-loader',
 				use: 'css-loader?minimize&sourceMap'
 			})
+		}, {
+			test: /\.scss$/,
+			use: ExtractTextPlugin.extract({
+				fallback: 'style-loader',
+				use: 'css-loader?minimize&sourceMap!sass-loader?sourceMap'
+			})
 		}]
 	},
 	devtool: 'source-map',
