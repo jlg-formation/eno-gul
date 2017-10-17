@@ -1,3 +1,7 @@
+import 'angular';
+import 'angular/angular-csp.css';
+import './style.css';
+
 const app = angular.module('main', []);
 
 app.component('enoHeader', {
