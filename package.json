@@ -12,6 +12,8 @@
   "dependencies": {
     "angular": "^1.6.6",
     "eslint": "^4.9.0",
-    "eslint-config-google": "^0.9.1"
+    "eslint-config-google": "^0.9.1",
+    "express": "^4.16.2",
+    "serve-index": "^1.9.1"
   }
 }
