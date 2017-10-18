@@ -1,19 +1,28 @@
-export const enoOldStar = function() {
+export const enoOldStar = function () {
     return {
-        compile: function() {
+        transclude: true,
+        controller: function EnoOldStarCtrl() {
+            console.log('EnoOldStarCtrl', this);
+            this.$onInit = () => {
+                console.log('EnoOldStarCtrl $onInit', this);
+
+            };
+        },
+        compile: function () {
             console.log('compile', arguments);
-            
-            
+
+
             return {
-                pre: function() {
+                pre: function () {
                     console.log('pre link', arguments);
                 },
-                post: function() {
-                    console.log('post link', arguments);
+                post: function (scope, element, attrs, ctrl, transclude) {
+                    console.log('post link', arguments, transclude());
+
                 }
             };
         }
-         
+
     };
-   
+
 };

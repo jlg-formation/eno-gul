@@ -19,7 +19,8 @@ export const enoStar = {
                 html += `<img ng-click="$ctrl.update(${i + 1})" src="eno-star/img/white_star.png">`;
             }
             $element.html(html);
-            $compile($element.contents())($scope);
+            const linkFn = $compile($element.contents());
+            linkFn($scope);
         });
 
         this.update = (newNote) => {
