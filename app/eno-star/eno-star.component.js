@@ -2,7 +2,7 @@ export const enoStar = {
     bindings: {
         note: '=?',
     },
-    controller: function EnoStarCtrl($scope, $element, $compile) {
+    controller: function EnoStarCtrl($scope, $element, $compile, $rootScope) {
         'ngInject';
 
         $scope.$watch('$ctrl.note', () => {
@@ -27,6 +27,8 @@ export const enoStar = {
             console.log('update', newNote);
             this.note = newNote;
         };
+
+        $rootScope.$emit('hello star');
 
     }
 };
