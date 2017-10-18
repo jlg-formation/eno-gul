@@ -3,6 +3,7 @@ export const enoOldStar = function() {
         compile: function() {
             console.log('compile', arguments);
             
+            
             return {
                 pre: function() {
                     console.log('pre link', arguments);
