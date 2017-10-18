@@ -46,5 +46,11 @@ module.exports = {
 		new webpack.optimize.CommonsChunkPlugin({
 			name: ['vendors']
 		}),
+		new webpack.optimize.UglifyJsPlugin({
+			sourceMap: true,
+			uglifyOptions: {
+				warnings: false
+			}
+		})
 	]
 };
