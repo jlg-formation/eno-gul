@@ -1,16 +1,17 @@
 export const enoStar = {
     bindings: {
-        note: '='
+        note: '<',
     },
-    controller: function EnoStarCtrl($element) {
+    controller: function EnoStarCtrl($scope, $element) {
         'ngInject';
-        
 
-        this.$onInit = () => {
+        $scope.$watch('$ctrl.note', () => {
             console.log('EnoStarCtrl', arguments);
             console.log('ctrl.note', this.note);
             let html = '';
-            const note = this.note || 3;
+            let note = this.note || 3;
+            note = (note > 5) ? 5: note;
+            note = (note < 0) ? 0: note;
             for (let i = 0; i < note; i++) {
                 html += '<img src="eno-star/img/yellow_star.png">';
             }
@@ -18,7 +19,7 @@ export const enoStar = {
                 html += '<img src="eno-star/img/white_star.png">';
             }
             $element.html(html);
-        };
+        });
 
     }
 };

@@ -3,7 +3,7 @@
 
 <head >
 	<meta charset="utf-8" >
-	<title>My First Angular directive</title>
+	<title ng-bind="'Hello ' + name"></title>
 	<link rel="stylesheet" href="wpk/vendors.css" />
 	<link rel="stylesheet" href="wpk/bundle.css" />
 </head>
@@ -13,6 +13,11 @@
 	<h1 ng-init="name = 'Maïté'">Hello {{name}} !</h1>
 	<eno-star></eno-star><br>
 	<eno-star note="4"></eno-star><br>
+	<eno-star note="14"></eno-star><br>
+	<eno-star note="-14"></eno-star><br>
+	<input type="number" ng-model="myNote"><br>
+	<eno-star note="myNote"></eno-star><br>
+	
 	<eno-footer></eno-footer>
 	<script src="wpk/vendors.js"></script>
 	<script src="wpk/bundle.js"></script>
