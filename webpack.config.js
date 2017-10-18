@@ -4,6 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 	entry: {
+		vendors: './app/vendors.js',
 		bundle: './app/main.js'
 	},
 	output: {
@@ -42,5 +43,8 @@ module.exports = {
 	devtool: 'source-map',
 	plugins: [
 		new ExtractTextPlugin('[name].css'),
+		new webpack.optimize.CommonsChunkPlugin({
+			name: ['vendors']
+		}),
 	]
 };
