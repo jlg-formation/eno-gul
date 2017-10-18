@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-csp ng-app="main">
+<html lang="en" ng-csp ng-app="main" ng-strict-di>
 
 <head >
 	<meta charset="utf-8" >
@@ -11,6 +11,7 @@
 <body  ng-cloak >
 	<eno-header></eno-header>
 	<h1 ng-init="name = 'Maïté'">Hello {{name}} !</h1>
+	<eno-star></eno-star><br>
 	<eno-footer></eno-footer>
 	<script src="wpk/vendors.js"></script>
 	<script src="wpk/bundle.js"></script>
